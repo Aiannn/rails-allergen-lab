@@ -1,0 +1,4 @@
+<% @ingredient.allergies.each do |aller| %>
+    <p><%= "#{aller.name}, #{aller.user.name}" %></p>
+<% end %>
+

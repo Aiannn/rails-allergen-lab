@@ -1,0 +1,11 @@
+<h1> USER </h1>
+
+<p><%= @user.name %></p>
+
+<h1> RECIPES </h1>
+
+<% @user.recipes.each do |recipe| %>
+    <p><%= link_to recipe.name, recipes_path %></p>
+<% end %>
+<br><br>
+<%= button_to 'Delete', user_path(@user), data: {:confirm => "Are you sure?"}, method:"delete" %>
